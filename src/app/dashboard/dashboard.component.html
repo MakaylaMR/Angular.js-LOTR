@@ -1,0 +1,8 @@
+<h2>Top Dwarves</h2>
+<div class="dwarves-menu">
+  <a *ngFor="let dwarf of dwarves" routerLink="/detail/{{dwarf.id}}">
+    {{dwarf.name}}
+  </a>
+</div>
+
+<app-dwarf-search></app-dwarf-search>

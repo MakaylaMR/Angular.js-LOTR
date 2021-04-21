@@ -1,0 +1,22 @@
+<h2>My Dwarves</h2>
+
+<div>
+  <label id="new-dwarf">Dwarf name: </label>
+  <input for="new-dwarf" #dwarfName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(dwarfName.value); dwarfName.value=''">
+    Add dwarf
+  </button>
+</div>
+
+<ul class="dwarves">
+  <li *ngFor="let dwarf of dwarves">
+    <a routerLink="/detail/{{dwarf.id}}">
+      <span class="badge">{{dwarf.id}}</span> {{dwarf.name}}
+    </a>
+    <button class="delete" title="delete dwarf"
+  (click)="delete(dwarf)">x</button>
+  </li>
+</ul>
+

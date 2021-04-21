@@ -1,0 +1,12 @@
+<div id="search-component">
+  <label for="search-box">Dwarf Search</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let dwarf of dwarves$ | async" >
+      <a routerLink="/detail/{{dwarf.id}}">
+        {{dwarf.name}}
+      </a>
+    </li>
+  </ul>
+</div>
