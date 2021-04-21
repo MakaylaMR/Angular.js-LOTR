@@ -1,4 +1,25 @@
 /* DwarvesComponent's private CSS styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@700&display=swap');
+
+/*heading*/
+h1,
+h2,
+label,
+.dwarves,
+button {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*paragraph*/
+p,
+a,
+input,
+li,
+ul {
+  font-family: 'Cabin', sans-serif;
+}
+
 .dwarves {
   margin: 0 0 2em 0;
   list-style-type: none;
